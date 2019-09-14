@@ -2,6 +2,14 @@
 	padding:0;
 	text-align:center;
 }
+.icon-l{
+	padding-left:5%;
+}
+.nav-l{
+	padding-right:5%;
+}
+
+/* section 1 */
 .home{
 	height:100%;
 	background-color: #343a40;
@@ -16,4 +24,47 @@
 .resume{
 	margin:2%;
 	color:white;
+}
+
+/* section 2 */
+.photo-sec{
+	padding:5%;
+}
+.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: auto;
+}
+
+.gallery:hover {
+  border: 1px solid #777;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+}
+.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+/* section 3 */
+.video-sec{
+	padding:5%;
+
+}
+.video{
+
+}
+
+
+/* footer */
+#footer{
+	color:white;
+	text-align:center;
+	height: 10rem;
+	background-color: #343a40;
+	padding: 5%;
 }
