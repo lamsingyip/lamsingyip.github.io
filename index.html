@@ -15,18 +15,21 @@
 		<section>
 			<div class="navtop container-fluid">
 				<!-- nav bar -->
-				<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-					<a class="icon-l navbar-brand" href="">-L-</a>
+				<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+					<a class="icon-l navbar-brand" href="index.html">-L-</a>
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
 						<span class="navbar-toggler-icon"></span>
 					</button>
 					<div class="nav-l collapse navbar-collapse" id="navbarTogglerDemo02">
 						<ul class="navbar-nav ml-auto">
 							<li class="nav-item">
-								<a class="nav-link" href="">Home</a>
+								<a class="nav-link" href="index.html">Home</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="">Drawing</a>
+								<a class="nav-link" href="#photo-sec">Drawing</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#video-sec">Video</a>
 							</li>
 							<li class="nav-item">
 								<a class="nav-link" href="">Contact</a>
@@ -40,12 +43,13 @@
 						<h1>Hi, I am Linsheng </h1>
 						<h3>A programmer who love drawing and snowboarding.</h3>
 						<button type="button" class="resume btn btn-outline-light btn-lg"><a class="resume" href="https://lamsingyip.github.io/Resume/">Resume</a></button>
+						<button type="button" class="resume btn btn-outline-light btn-lg"><a class="resume" href="https://github.com/lamsingyip">GitHub</a></button>
 					</div>
 				</div>
 			</div>
 		</section>
 		<section>
-			<div class="photo-sec container-fluid">
+			<div id="photo-sec" class="photo-sec container-fluid">
 				<div>
 					<h2>Drawing Gallery</h2>
 				</div>
@@ -104,10 +108,9 @@
 			</div>
 		</section>
 		<section>
-			<div class="video-sec">
+			<div id="video-sec" class="video-sec">
 				<h2>VLOG Snowboarding</h2>
 				<p> Season 2018-2019 </p>
-				<iframe class="video" type="text/html" width="640" height="500" src="http://www.youtube-nocookie.com/embed/5ER3id7dVjg" allowfullscreen></iframe>
 				<!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
 				<div id="player"></div>
 				<script>
@@ -125,30 +128,7 @@
 							height: '360',
 							width: '640',
 							videoId: '5ER3id7dVjg',
-							events: {
-								'onReady': onPlayerReady,
-								'onStateChange': onPlayerStateChange
-							}
 						});
-					}
-					// 4. The API will call this function when the video player is ready.
-					function onPlayerReady(event) {
-						event.target.playVideo();
-					}
-					// 5. The API calls this function when the player's state changes.
-					//    The function indicates that when playing a video (state=1),
-					//    the player should play for six seconds and then stop.
-					var done = false;
-
-					function onPlayerStateChange(event) {
-						if (event.data == YT.PlayerState.PLAYING && !done) {
-							setTimeout(stopVideo, 6000);
-							done = true;
-						}
-					}
-
-					function stopVideo() {
-						player.stopVideo();
 					}
 				</script>
 			</div>
