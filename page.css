@@ -59,7 +59,13 @@
 
 }
 
-
+/* video */
+@media only screen and (max-width: 720px) {
+  #player{
+		width: 50%;
+		height: auto;
+	}
+}
 /* footer */
 #footer{
 	color:white;
